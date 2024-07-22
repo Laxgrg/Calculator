@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div id="grid">
+      <div id="calculator">
+        <form name="calculatorForm">
+          <div id="display">
+            <input type="text" name="display" />
+          </div>
+          <div id="firstRow">
+            <input type="button" value="AC" onclick="clearDisplay()" class="button"/>
+            <input type="button" value="DE" onclick="deleteLastChar()"class="button"/>
+            <input type="button" value="." onclick="addValue('.')" class="button"/>
+            <input type="button" value="/" onclick="addValue('/')" class="button"/>
+          </div>
+          <div id="secondRow">
+            <input type="button" value="7" onclick="addValue('7')" class="button"/>
+            <input type="button" value="8" onclick="addValue('8')" class="button"/>
+            <input type="button" value="9" onclick="addValue('9')" class="button"/>
+            <input type="button" value="*" onclick="addValue('*')" class="button"/>
+          </div>
+          <div id="thirdRow">
+            <input type="button" value="4" onclick="addValue('4')" class="button"/>
+            <input type="button" value="5" onclick="addValue('5')" class="button"/>
+            <input type="button" value="6" onclick="addValue('6')" class="button"/>
+            <input type="button" value="-" onclick="addValue('-')" class="button"/>
+          </div>
+          <div id="fourthRow">
+            <input type="button" value="1" onclick="addValue('1')" class="button"/>
+            <input type="button" value="2" onclick="addValue('2')" class="button"/>
+            <input type="button" value="3" onclick="addValue('3')" class="button"/>
+            <input type="button" value="+" onclick="addValue('+')" class="button"/>     
+          </div>
+          <div id="fifthRow">
+            <input type="button" value="00" onclick="addValue('00')" />
+            <input type="button" value="0" onclick="addValue('0')" />
+            <input type="button" value="=" onclick="calculate()" class="button"/>    
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

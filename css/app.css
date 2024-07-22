@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 7em;
+  background: linear-gradient(to right, #507e9d, rgb(239, 118, 213));
+}
+
+#grid {
+  display: grid;
+  width: 500px;
+  height: auto;
+  margin: 150px auto;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  grid-template-areas:
+    'ro1 ro1 ro1 ro1 ro1 ro1 ro1 ro1 ro1 ro1 ro1 ro1'
+    'ro2 ro2 ro2 ro2 ro2 ro2 ro2 ro2 ro2 ro2 ro2 ro2'
+    'ro3 ro3 ro3 ro3 ro3 ro3 ro3 ro3 ro3 ro3 ro3 ro3'
+    'ro4 ro4 ro4 ro4 ro4 ro4 ro4 ro4 ro4 ro4 ro4 ro4'
+    'ro5 ro5 ro5 ro5 ro5 ro5 ro5 ro5 ro5 ro5 ro5 ro5';
+}
+
+#calculator {
+  background: hsl(220, 7%, 16%);
+  padding: 30px;
+  border-radius: 15px;
+  height: auto;
+}
+
+#calculator form input[type='button'] {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+              5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#calculator form input[type='text'] {
+  text-align: right;
+  font-size: 35px;
+  width: calc(100% -10px);
+  margin: 5px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  color: #fff;
+}
+
+form #display {
+  margin: 10px;
+}
+
+#firstRow {
+  display: grid;
+  grid-area: ro1;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  height: auto;
+}
+
+#secondRow {
+  display: grid;
+  grid-area: ro2;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+#thirdRow {
+  display: grid;
+  grid-area: ro3;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  height: auto;
+}
+
+#fourthRow {
+  display: grid;
+  grid-area: ro4;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  height: auto;
+}
+
+#fifthRow {
+  display: grid;
+  grid-area: ro5;
+  grid-template-columns: 1fr 1fr 2fr;
+  align-items: center;
+  height: auto;
+}
+
+#fifthRow > .button,
+#fifthRow input[type='button']:last-child {
+  width: 12.5rem;
+}
